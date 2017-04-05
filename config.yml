@@ -48,6 +48,7 @@ aut: ["youten"]
 # a-cmm, cmm: 解釈・分析・考察者
 # a-dsr, dsr: デザイナ
 # a-edt, edt: 編集者
+#edt: ["mhidaka"]
 # a-ill, ill: イラストレータ
 # a-lyr, lyr: 歌詞作成者
 # a-mdc, mdc: メタデータセットの一次的責任者
@@ -56,6 +57,7 @@ aut: ["youten"]
 # a-oth, oth: その他
 # a-pht, pht: 撮影責任者
 # a-pbl, pbl: 出版社（発行所）
+#pbl: TechBooster
 # a-prt, prt: 印刷所
 # a-red, red: 項目の枠組起草者
 # a-rev, rev: 評論者
@@ -70,9 +72,9 @@ date: 2017-04-09
 # 複数指定する場合は次のように記述する
 # [["初版第1刷の日付", "初版第2刷の日付"], ["第2版第1刷の日付"]]
 # 日付の後ろを空白文字で区切り、任意の文字列を置くことも可能。
-history: [["2017-04-09"]]
+history: [["2017-04-09 技術書典2版 v0.9.0"]]
 # 権利表記(配列で複数指定可)
-# rights: (C) 2016 Re:VIEW Developers
+rights: (C) 2017 ReDo れいぞうこのドア
 # description: 説明
 # subject: 短い説明用タグ(配列で複数指定可)
 # type: 書籍のカテゴリーなど(配列で複数指定可)
@@ -84,31 +86,31 @@ history: [["2017-04-09"]]
 # デバッグフラグ。nullでないときには一時ファイルをカレントディレクトリに作成し、削除もしない
 debug: null
 
-# 固有IDに使用するドメイン。指定しない場合には、時刻に基づくランダムUUIDが入る
-# urnid: urn:uid:http://example.com/book-title/
+# 固有IDに使用するドメイン。省略した場合は時刻に基づくランダムUUIDが入る
+urnid: urn:uid:https://github.com/youten/howto-create-vr-contents
 #
 # ISBN。省略した場合はurnidが入る
 # isbn: null
 #
 # HTMLファイルの拡張子(省略した場合はhtml)
-# htmlext: html
+htmlext: html
 #
-# CSSファイル(配列で複数指定可)
+# CSSファイル(配列で複数指定可、yamlファイルおよびRe:VIEWファイルを置いたディレクトリにあること)
 stylesheet: ["style.css"]
 
 # ePUBのバージョン (2か3)
-# epubversion: 2
+epubversion: 3
 #
 # HTMLのバージョン (4か5。epubversionを3にしたときには5にする)
-# htmlversion: 4
+htmlversion: 5
 
 # 目次として抽出する見出しレベル
-toclevel: 3
+toclevel: 2
 
 # 採番の設定。採番させたくない見出しには「==[nonum]」のようにnonum指定をする
 #
 # 本文でセクション番号を表示する見出しレベル
-secnolevel: 3
+secnolevel: 2
 
 # 以下のsecnolevelはまだ未実装。
 # 前付でセクション番号を表示する見出しレベル(未実装)
@@ -131,10 +133,10 @@ toc: true
 # cover: null
 #
 # 表紙に配置し、書籍の影絵にも利用する画像ファイル。省略した場合はnull (画像を使わない)。画像ディレクトリ内に置いてもディレクトリ名は不要(例: cover.jpg)
-#coverimage: cover.jpg
+# coverimage: cover.jpg
 #
 # 表紙の後に大扉ページを作成するか。省略した場合はnull (作成しない)
-# titlepage: null
+titlepage: true
 #
 # 自動生成される大扉ページを上書きするファイル。ファイル名を指定すると大扉として入る
 # titlefile: null
@@ -146,7 +148,7 @@ toc: true
 # creditfile: null
 
 # 奥付を作成するか。デフォルトでは作成されない。trueを指定するとデフォルトの奥付、ファイル名を指定するとそれがcolophon.htmlとしてコピーされる
-# colophon: null
+colophon: true
 
 # 裏表紙ファイル (画像はcoversまたはimagesに配置する)。ファイル名を指定すると裏表紙として入る
 # backcover: null
@@ -187,7 +189,7 @@ toc: true
 # page_metric: [40,80,40,80,2]
 
 # ページ送りの送り方向、page-progression-directionの値("ltr"|"rtl"|"default")
-# direction: "ltr"
+direction: "ltr"
 
 # EPUBのOPFへの固有の追加ルール
 # <package>要素に追加する名前空間
@@ -216,8 +218,8 @@ epubmaker:
   #
   # NCX目次の見出しレベルごとの飾り(配列で設定)。EPUB3ではNCXは作られない
   # ncxindent:
-  #- 
-  #- - 
+  #-
+  #- -
   # フックは、各段階で介入したいときのプログラムを指定する。自動で適切な引数が渡される
   # プログラムには実行権限が必要
   # ファイル変換処理の前に実行するプログラム。スタイルシートのコンパイルをしたいときなどに利用する。
@@ -272,10 +274,12 @@ epubmaker:
   # epubmaker:階層を使うものはここまで
 
 # LaTeX用のスタイルファイル(styディレクトリ以下に置くこと)
-texstyle: reviewmacro, underscore
+# tatsumacroは、電子書籍版の制作に利用する
+# texstyle: tatsumacro
+texstyle: techbooster-doujin
 #
 # LaTeX用のdocumentclassを指定する
-# texdocumentclass: ["jsbook", "uplatex,oneside"]
+texdocumentclass: ["jsbook", "b5j,twoside,openany,uplatex"]
 #
 # LaTeX用のコマンドを指定する
 # texcommand: "uplatex"
@@ -317,3 +321,12 @@ pdfmaker:
   colophon: true
   # pdfmaker:階層を使うものはここまで
 
+# 以下のパラメータを有効にするときには、
+# webmaker:
+#    パラメータ: 値
+#    パラメータ: 値
+#   ...
+# という構成にする必要がある(インデントさせる)
+#
+webmaker:
+    stylesheet: ["style.css","style-web.css"]

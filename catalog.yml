@@ -1,9 +1,16 @@
 PREDEF:
-
+#  - preface.re
 CHAPS:
   - vr-contents.re
+#  - writing-book.re
+#  - setup.re
+#  - review-introduction.re
+#  - configure.re
+#  - build.re
+#  - workflow.re
+#  - tips.re
 
 APPENDIX:
 
 POSTDEF:
-
+  - atogaki.re
