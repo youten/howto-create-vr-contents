@@ -84,7 +84,7 @@ VR HMD（ヘッドマウントディスプレイ）内での視線検出は、�
  * 2016年4月5日 HTC Vive発売
  ** ヘッドマウントユニット・コントローラに赤外線センサを搭載、周囲に配置したユニットから赤外線レーザーを照射し読み取らせる。"LightHouse"という名前がついている。
  ** 対角線上に配置した2機のレーザー照射ユニットで最大4.5m x 4.5mと広くルームスケール@<fn>{room-scale}を実現。原理上、他のViveセットの隣接配備によるレーザー混線に弱い。レーザーを吸収する黒い布壁でがんばる。
- * 2016年10月13日 Playstation VR発売
+ * 2016年10月13日 PlayStation VR発売
  ** ヘッドマウントユニット・コントローラにカラーLEDを搭載、RGBステレオカメラによる読み取りにより位置を測定する。PS Move + PS Cameraとその技術を流用しており、他2つに比べ機構上トラッキング範囲は狭く、光源サイズの大きさにひきずられた低い精度をジャイロで補正しており、それなりに発生するドリフトに対しては必死に手元でのカメラリセット操作により人力補正が必要であり、また、外界の照明環境の影響がかなり大きい。
 
 設置環境やコンテンツに依存しますし、主観ではあるのですがポジショントラッキングについてまとめると、以下の通りです。
@@ -133,7 +133,7 @@ VRコンテンツは、姿勢に応じた視界の変化を予め描いておく
 ただし、"3D"はともかく"2D"は直感的とは言いがたく、聴覚に対する音声のモノラル/ステレオにあわせて視覚に対する画像のモノラル/ステレオという表現が良いのでは、と考えています。
 リアルタイムに左右の目に別の映像を用意することができるリアルタイムレンダリングのコンテンツでモノラルのものはあまりありませんが、プリレンダリングのコンテンツで、実写映像など、モノラルのコンテンツも数多く存在します。
 
-圧倒的なPlaystation VRの知名度を考慮するに、ゲームがVR技術を代表するコンテンツとは言えそうですが、YouTube、GoogleフォトやFacebookなど、既存のサービスが360度メディアに対応していく流れを見るに、VRという特別な枠の中で分類ではなく、ゲーム・写真・映像などの既存メディア@<fn>{sound-media-vr}にVR技術を用いた要素が追加され、それぞれでRealityが増していく流れがある、と捉えるほうが良さそうな気がしています。
+圧倒的なPlayStation VRの知名度を考慮するに、ゲームがVR技術を代表するコンテンツとは言えそうですが、YouTube、GoogleフォトやFacebookなど、既存のサービスが360度メディアに対応していく流れを見るに、VRという特別な枠の中で分類ではなく、ゲーム・写真・映像などの既存メディア@<fn>{sound-media-vr}にVR技術を用いた要素が追加され、それぞれでRealityが増していく流れがある、と捉えるほうが良さそうな気がしています。
 
 //footnote[sound-media-vr][本書では前述の通り、視覚を中心に取り上げていますが、バイノーラル技術を用いた音声コンテンツが大好きな筆者としてはSpatial Audio側の進化も楽しみにしており、ヘッドホンにスマートフォンを装着するとか、ジャイロ搭載ヘッドホンのメジャー化にも期待しています。]
 
@@ -323,10 +323,10 @@ HTC Vive@<fn>{htc-vive}は、HTC社製のVRデバイスです。
 
 //footnote[htc-vive][@<href>{https://www.vive.com/jp/}]
 
-=== Playstation VR
+=== PlayStation VR
 
-Playstation VR@<fn>{playstation-vr}は、SIE社製のVRデバイスです。
-コンシューマゲームハードであるPlaystation 4の付属品で、単体では動作しません。
+PlayStation VR@<fn>{playstation-vr}は、SIE社製のVRデバイスです。
+コンシューマゲームハードであるPlayStation 4の付属品で、単体では動作しません。
 これまであげてきたデバイスの中では唯一、開発機としては使えません。
 メガネユーザでも抜群に装着しやすい構造とディスプレイの品質の高さが特徴です。
 前述のLittlstarの他、サマーレッスンやRez Infiniteなど、PS4とPS4 Proでグラフィック品質の変わるタイトルもあり、ぜひ母艦としてはPS4 Proを用意したいところです。
@@ -479,12 +479,23 @@ GoogleはYoutube向けに、前後左右4chの音声トラックを格納する�
 
 //footnote[spatial-audio-youtube][360 度動画や VR 動画で空間音声を使用する @<href>{https://support.google.com/youtube/answer/6395969?hl=ja}]
 //footnote[vr-video-youtube][バーチャル リアリティ動画のアップロード @<href>{https://support.google.com/youtube/answer/6316263?hl=ja}]
-//footnote[aspect-16-9-issue][申し訳ありません、最近追試できていないので次版までには確認します…]
+//footnote[aspect-16-9-issue][申し訳ありません、最近追試できていないので確認します…]
 
-== VRTKでOculus RiftとHTC Vive向け
+== VRTKでHTC ViveとOculus Rift向け
+
 === VRTKとは
 
-※力尽きました。公開リポジトリにて追記アップデート予定です。
+//image[vrtk-01][VRTK - Virtual Reality Toolkit][scale=0.85]{
+//}
+
+VRTK@<fn>{virtual-reality-toolkit}はVirtual Reality Toolkitの略で、VRアプリ開発に必要な便利な機能を提供するUnity向けライブラリです。
+VR空間での移動、ポインタによるオブジェクト選択、触る・掴むといった操作や2D・3Dのボタン・レバー・ドア・引き出しなどを簡単に実現します。
+
+他プラットフォームへの対応も準備はされているようですが、現状HTC ViveとOculus Rift両方に対応しており、VRTKに任せられる範囲は任せてしまうのが良いと考えられます。
+
+※「Unityネイティブ対応のOpenVR＋SteamVR＋VRTK」と「Unityネイティブ対応のOculus＋Oculus Utilities＋VRTK」のサンプルを動かすまでの話を記載予定です。
+
+//footnote[virtual-reality-toolkit][@<href>{https://vrtoolkit.readme.io/}]
 
 == UnityでCardboard/Daydream向け
 === Google VR SDKとUnityのVR Native対応について
