@@ -20,7 +20,7 @@
 
  * @<href>{https://github.com/youten/howto-create-vr-contents}
  ** Re:VIEWの素材一式、出力PDF、関連プロジェクトのソースコードを全て含む想定です。
- ** Andorid, Unity等の開発環境の構築手順についても、順次作成の上同リポジトリで公開したいと考えています。
+ ** Android, Unity等の開発環境の構築手順についても、順次作成の上同リポジトリで公開したいと考えています。
 
 本書のうち、私youtenが著作権を有する範囲のライセンスについては、文章はCC-BY 4.0@<fn>{cc-by-4}、ソースコードについてはApache License v2@<fn>{apache-license-v2}を適用します。
 また、表紙他、ImagineVRのIrisモデルをIris ImagineGirlsユーザーライセンス(IGUL)に基づき利用させていただいております。
@@ -43,7 +43,7 @@ Virtual Realityとは、直訳では「仮想の、事実上の現実感」で�
 例えば、聴覚で言えばそもそも蓄音機に始まった「録音し、再生する」ことそのものは、あたかもその人がそこで喋っているように、ある演奏が目の前で行われているかのように感じさせるVR技術そのものです。
 普及して日常生活となった「イヤホンやヘッドホン、スピーカーセットなどでステレオの音楽を聴く」という行為は、モノラルの音声と比較してよりRealityを再現したVRと言えると思います。
 
-例として聴覚を挙げましたが、テレビやビデオ、化学調味料とインスント食品、ゲームのバイブレーションなど、他の視覚・嗅覚・味覚・触覚についても、それぞれRealityを記録・再生・伝達する基礎技術があって、組み合わせると高い現実感を生み出せることを、みなさんはすでに日常生活で体験していると思います。
+例として聴覚を挙げましたが、テレビやビデオ、化学調味料とインスタント食品、ゲームのバイブレーションなど、他の視覚・嗅覚・味覚・触覚についても、それぞれRealityを記録・再生・伝達する基礎技術があって、組み合わせると高い現実感を生み出せることを、みなさんはすでに日常生活で体験していると思います。
 
 8割とか9割とか言われていますが、人間は外界の情報を主に視覚から得ており、昨今のVRムーヴメントは、この視覚の現実感の再現が以下のように、技術的にとても高いレベルで、しかもそれなりの低コストでできるようになったことをトリガとして始まっています。
 
@@ -151,7 +151,7 @@ SamsungのGalaxy Gear VR向け動画再生アプリ、Samsung VRのFAQ@<fn>{sams
 
 === Equirectangular（360度全天球）
 
-//image[equirectangular-theta][モノラルEquirecangular画像例][scale=0.65]{
+//image[equirectangular-theta][モノラルEquirectangular画像例][scale=0.65]{
 //}
 
 投影方法としては正距円筒図法とも言われ、球の天頂と底の頂点を表面に沿って縦に割き、ぐいっと長方形になるように伸ばした開いたものです。
@@ -173,7 +173,7 @@ SamsungのGalaxy Gear VR向け動画再生アプリ、Samsung VRのFAQ@<fn>{sams
 
 === フォーマットの向き不向き
 
-Youtubeが360度動画としてブラウザでのドラッグによる2D上での操作、VR環境での天球描画にモノラル・ステレオ含め対応したことにより、Equirectangularがデファクトスタンダードのフォーマットとして定着した感がありますが、正面がコンテンツの中心であり後方部分に情報の無いフォーマットでは残りの領域は無駄になってしまいます。変化のない（例えば黒く塗りつぶされた）領域は動画のファイルサイズとしては影響がほぼありませんが、再生側でデコードしてVRAMへ転送して…といった際には解像度はしっかり限界に影響してしまいます。
+YouTubeが360度動画としてブラウザでのドラッグによる2D上での操作、VR環境での天球描画にモノラル・ステレオ含め対応したことにより、Equirectangularがデファクトスタンダードのフォーマットとして定着した感がありますが、正面がコンテンツの中心であり後方部分に情報の無いフォーマットでは残りの領域は無駄になってしまいます。変化のない（例えば黒く塗りつぶされた）領域は動画のファイルサイズとしては影響がほぼありませんが、再生側でデコードしてVRAMへ転送して…といった際には解像度はしっかり限界に影響してしまいます。
 
 現時点でフラッグシップのスマートフォンであっても4Kの3840x2160の60FPSがハードウェア側の限界であり（ディスプレイが4Kに満たないのですからそれ以上のデコード能力が不要なのは当然です）、たとえば4KのEquirectangular（縦横比2:1）のステレオでは3840x1920x2、Top-Bottomの上下配置とすると、動画の解像度は3840x3840となります。このサイズを60FPS再生は厳しく、30FPSで再生できてればかなり出来の良い（柔軟に処理をがんばっている）モバイルデバイスだと考えてください。
 
@@ -182,7 +182,7 @@ Youtubeが360度動画としてブラウザでのドラッグによる2D上で�
 これらのいわゆる「VR動画」についても2016年は元年と言える花開いた年でした。
 まだまだIPD（瞳孔間距離）を考慮した適切な視差の追求や、十分な解像度の確保ができていない@<fn>{youtube-vr-japan}ものが多い印象ですが、徐々に世間要望が高解像度のステレオ動画に収束しつつある印象です。Insta360 Pro@<fn>{insta360-pro}が楽しみです。
 
-//footnote[youtube-vr-japan][近距離でまったく像を結べなくなる広すぎるIPDや、THETAソースから劣化ありで加工しているような低解像度の動画をビジネス目的でYoutubeにアップロードしている方々は、高品質の4Kステレオをガンガン放り込んでくるお隣の国を早く見習ってほしいものです…]
+//footnote[youtube-vr-japan][近距離でまったく像を結べなくなる広すぎるIPDや、THETAソースから劣化ありで加工しているような低解像度の動画をビジネス目的でYouTubeにアップロードしている方々は、高品質の4Kステレオをガンガン放り込んでくるお隣の国を早く見習ってほしいものです…]
 //footnote[insta360-pro][Insta360 Pro @<href>{https://www.insta360.com/product/insta360-pro}。ちなみに筆者はInsta360 Proは高価すぎて躊躇したため、TwoEyes VR @<href>{https://www.kickstarter.com/projects/244975696/twoeyes-vr-360-camera}に期待しています。]
 
 == PSVRでのVR動画再生とLittlstar
@@ -256,8 +256,8 @@ Google Cardboard@<fn>{google-cardboard}は、ダンボールにアクリル製�
 開発元のGoogleが設計図を無償で公開したため、クローンが多数存在します。
 
 Google CardboardはAndroidやiPhoneのスマートフォンを母艦とします。
-レンズがはめ込まれた箱をViewerといいますが、このViewer様々なサイズのスマートフォンをサポートすべく、レンズからスマートフォンのスクリーンまでの長さ、左右のレンズ間の長さ、レンズの歪み係数などの様々なパラメータを表現したProfileという概念をもっており、Profileを示すQRコードを生成できるサイト@<fn>{viewer-profile-generator}も公開されています。
-Google VR SDKはこのProfileのQRコードを読み込んでViewerを設定できるUI・機能を持ち、設定されたProfileに応じた適切な左右の画面を描画を行います。
+レンズがはめ込まれた箱をViewerといいますが、このViewerで様々なサイズのスマートフォンをサポートすべく、レンズからスマートフォンのスクリーンまでの長さ、左右のレンズ間の長さ、レンズの歪み係数などの様々なパラメータを表現したProfileという概念をもっており、Profileを示すQRコードを生成できるサイト@<fn>{viewer-profile-generator}も公開されています。
+Google VR SDKはこのProfileのQRコードを読み込んでViewerを設定できるUI・機能を持ち、設定されたProfileに応じた適切な左右の画面描画を行います。
 Google Cardboard互換と思われるVRゴーグルにてQRコードが見当たらない場合は、自分で測定の上QRコードを生成して読み込みましょう。
 
 全てのAndroid・iPhoneスマートフォンに対応していると思われがちですが、いわゆるローエンドのデバイスはジャイロセンサ非搭載のため非対応であったり、高解像度の動画のデコードやゲームアプリにてCGをリアルタイムレンダリングするGPUパワーが不足することとなり、2,3年以内に発売したミドルレンジ以上のスペック向けとお考えください。
@@ -271,7 +271,7 @@ Google Cardboard互換と思われるVRゴーグルにてQRコードが見当た
 ハコスコ社は一眼のものの他、Cardboard v2クローンを含む二眼の製品も販売しており@<fn>{hacosco-product}、アプリ・プラットフォームは一眼・二眼両方をサポートしています。
 
 ハコスコ 一眼の特徴はなんといっても立体視に関する脳の成長への影響や、顔そのものの大きさに起因するIPD調節機構の制限などから7歳や13歳といった視差あり二眼のVRデバイスのような年齢制限の必要がなく、全年齢に対応していることです。
-ただし、ステレオではなくとも十分な没入間を得ることができるため、お子様の利用時にはまわりの方がよく気をつけてあげる必要があります。
+ただし、ステレオではなくとも十分な没入感を得ることができるため、お子様の利用時にはまわりの方がよく気をつけてあげる必要があります。
 
 //footnote[hacosco][@<href>{http://hacosco.com/}]
 //footnote[hacosco-product][@<href>{http://hacosco.com/product/}]
@@ -297,7 +297,7 @@ Cardboardで全てのAndroidデバイスに高度なVR体験を提供するこ�
 ただし、残念ながら2017年4月現在日本国内で対応スマートフォンの発売は予定されておらず、ヘッドマウントユニット+コントローラのセットであるDaydream Viewも輸入する必要があります。
 それでも、2017年3月頭から日本でもDaydreamストアアプリが正常に利用できるようになったことや、グローバルモデルではDaydream対応であろう新しいAndroidデバイスの国内発売の情報が出てきており、夏までには日本でも正式にDaydreamが楽しめるようになると期待しています。
 
-ちなみにその性能ですが、ヘッドトラッキング性能についてはGear VRと概ね同等で、初めからコントローラありきのホーム・ストアアプリの融合の完成度が高い印象です。Googleフォト、Google StreetView、YoutubeとおなじみのアプリのVRバージョン、SKYBOX VR Player@<fn>{daydream-skybox-vr-player}による快適なローカル動画の再生と、ゲームを含めずともCardboardとは一線を画したVR体験を楽しむことができます。
+ちなみにその性能ですが、ヘッドトラッキング性能についてはGear VRと概ね同等で、初めからコントローラありきのホーム・ストアアプリの融合の完成度が高い印象です。Googleフォト、Google StreetView、YouTubeとおなじみのアプリのVRバージョン、SKYBOX VR Player@<fn>{daydream-skybox-vr-player}による快適なローカル動画の再生と、ゲームを含めずともCardboardとは一線を画したVR体験を楽しむことができます。
 
 Gear VRとの大きな違いはストアアプリがGoogle Playであること、Androidアプリのapkのインストールに特別な署名が要らないため、ストア外サードパーティapk配布の夢が（通常のAndroidアプリと同様に）あることです。
 
@@ -337,9 +337,9 @@ PlayStation VR@<fn>{playstation-vr}は、SIE社製のVRデバイスです。
 
 これまで上げてきたVRデバイス環境の購入費用について、母艦となるPCやスマートフォンもあわせてまとめると、以下のようになります。
 
- * Cardboard・ハコスコ：Android（5〜10万円）またはiPhone（8〜12万円） + Carboard互換品/ハコスコ（1,000円〜5,000円）
+ * Cardboard・ハコスコ：Android（5〜10万円）またはiPhone（8〜12万円） + Cardboard互換品/ハコスコ（1,000円〜5,000円）
  * Daydream：Android（5〜12万円） + Daydream View（10,000円）
- ** Pixel XLは高級品ですが、他にもDadyream ready機が増えつつあること、Daydrema Viewは$79ですが輸入する必要があります。
+ ** Pixel XLは高級品ですが、他にもDadyream ready機が増えつつあること、Daydream Viewは$79ですが輸入する必要があります。
  * Gear VR：Galaxy（5万〜10万円） + Gear VR（10,000〜15,000円）
  ** 母艦として国内で型落ちのGalaxyを狙うとコスパフォがよくなります。
  * Oculus Rift：PC（GTX1050Ti, 8万円） + RiftとTouchセット（77,000円）
@@ -378,7 +378,7 @@ THETA@<fn>{ricoh-theta}はRICOH社のカメラで、コンパクトな棒状の�
 //image[daydream-google-photo][DaydreamでのGoogleフォト画像閲覧][scale=1.00]{
 //}
 
-具体的にどのような表示なるかについて、Googleフォトで旧上岡小学校の写真を共有公開しています@<fn>{google-photo-uwaoka}のでよければそちらを確認願います。
+具体的にどのような表示となるかについて、Googleフォトで旧上岡小学校の写真を共有公開しています@<fn>{google-photo-uwaoka}のでよければそちらを確認願います。
 
 //footnote[google-photo-uwaoka][@<href>{https://goo.gl/photos/yzNVv6GGz7xUMWgn9}]
 
@@ -429,7 +429,7 @@ MMDことMikuMikuDance@<fn>{mikumikudance}は3DCGムービー作成ツールで�
 
 では、MikuMikuDomeMasterでのステレオVR動画の作成方法について、ざっとご紹介します。
 
-MikuMikuDomeMasterのステレオは視差設定にあわせカメラを左右に並べた方式となっているため、正面のみが正しく立体視が可能となります。
+MikuMikuDomeMasterのステレオは視差設定にあわせカメラを左右に並べた方式となっているため、正面のみ正しく立体視が可能となります。
 よって、「適度に離れた正面にモデルをソロで配置し、あまり左右に動かないモーション」を適用し、正面に注視ポイントが集中する動画を作ることがキモとなります。例えば、中央に人が入らない鏡映しデュオモーションなどは残念ながらこの方式のステレオに向いていません。
 
 そこを踏まえた素材を用意した上で、空の新規MMDプロジェクトにモデル・背景・モーションを読み込みます。
@@ -442,7 +442,7 @@ AVIの出力サイズは、以下のように設定してください。いず�
  ** DomeMaster-SBS（サイドバイサイド）180度はアスペクト比2:1で設定
  *** ハイスペックスマホ・PS4 Pro向け：3200x1600
  *** ミドルレンジスマホ・ProでないPS4向け：1920x960
- * Youtubeアップロード向けステレオはアスペクト比16:18で設定
+ * YouTubeアップロード向けステレオはアスペクト比16:18で設定
  ** Equirectangular360度Top-Bottom
  *** 可能であれば4K、2160Pステレオで：3840x4320
  *** 制作環境上、4Kが困難な際には：1920x2160
@@ -452,7 +452,7 @@ AVIの出力サイズは、以下のように設定してください。いず�
 //image[mmdm-01][DomeMaster.pmxのみMainに残す][scale=0.75]{
 //}
 
-続けて、Equirectangularであれば読み込んだpmxのモデル名「パノラマ」から、DM-PanoモーフをPano側に設定します。Domemasterの際にはDM-PanoモーフをDM側に設定した後、天頂を向いているのを角度にX=90.0を設定することで正面に回すことができます（@<img>{mmdm-02}）。
+続けて、Equirectangularであれば読み込んだpmxのモデル名「パノラマ」から、DM-PanoモーフをPano側に設定します。DomeMasterの際にはDM-PanoモーフをDM側に設定した後、天頂を向いているのを角度にX=90.0を設定することで正面に回すことができます（@<img>{mmdm-02}）。
 
 //image[mmdm-02][DM-Panoモーフをいずれかの端に設定][scale=0.75]{
 //}
@@ -467,15 +467,15 @@ MikuMikuDomeMasterの初期設定では高解像度の出力時にキューブ�
 具体的にはSub/MakeCubeUtils.incを開き、RT_SIZEを2048に、AA_Loopsを2に書き換え、MMEの再読み込み（MMEffectメニュー→すべて更新で実行）を行います。SSAO-Cubes.xなどを併用しているとかなり重くなりますが、気合で乗り越えてAVI出力を実施しましょう。出力終了後にMakeCubeUtils.incを書き戻すのをお忘れなく。
 
 AviUtl + x264guiExなどでmp4にエンコードした後は、お手持ちの環境でお楽しみください。
-Youtube等、動画プラットフォームへの投稿公開はモデル・モーション・背景等素材のライセンスに十分にお気をつけて！
+YouTube等、動画プラットフォームへの投稿公開はモデル・モーション・背景等素材のライセンスに十分にお気をつけて！
 
-=== YoutubeのVR対応について
+=== YouTubeのVR対応について
 
-Youtubeは順番に、「360度動画」「ステレオ360度のVR動画」「360度動画・VR動画における360度空間音声（Spatial Audio）」に対応するようになりました。
+YouTubeは順番に、「360度動画」「ステレオ360度のVR動画」「360度動画・VR動画における360度空間音声（Spatial Audio）」に対応するようになりました。
 空間音声（Spatial Audio）は3D音声や立体音響などとも言われ、顔の位置・向きにあわせた音が聞こえることを示します。
-GoogleはYoutube向けに、前後左右4chの音声トラックを格納する仕様を採用・提案しています@<fn>{spatial-audio-youtube}。
+GoogleはYouTube向けに、前後左右4chの音声トラックを格納する仕様を採用・提案しています@<fn>{spatial-audio-youtube}。
 
-この、Youtubeの仕様に基づいたVR動画の作成方法については、原則サイトで公開されている手順に沿えば良いのですが、「ソースはアスペクト比1:1にしてください」と書いてある割にどうやら今現在でも「16:9の左右映像をTop-Bottomで結合した16:18の動画」をアップロードする必要があることに留意願います@<fn>{aspect-16-9-issue}。
+この、YouTubeの仕様に基づいたVR動画の作成方法については、原則サイトで公開されている手順に沿えば良いのですが、「ソースはアスペクト比1:1にしてください」と書いてある割にどうやら今現在でも「16:9の左右映像をTop-Bottomで結合した16:18の動画」をアップロードする必要があることに留意願います@<fn>{aspect-16-9-issue}。
 
 //footnote[spatial-audio-youtube][360 度動画や VR 動画で空間音声を使用する @<href>{https://support.google.com/youtube/answer/6395969?hl=ja}]
 //footnote[vr-video-youtube][バーチャル リアリティ動画のアップロード @<href>{https://support.google.com/youtube/answer/6316263?hl=ja}]
@@ -501,7 +501,7 @@ VR空間での移動、ポインタによるオブジェクト選択、触る・
 === Google VR SDKとUnityのVR Native対応について
 
 Daydreamの発表直後に、それまでCardboard SDKという名前だったものはGoogle VR SDKへと名称が変更となりました。
-また、それと同時にUnityがDaydreadm/Cardboard 両VRプラットフォームにNative対応することが発表されました。
+また、それと同時にUnityがDaydream/Cardboard 両VRプラットフォームにNative対応することが発表されました。
 ちなみに、Unityでの「Native対応」というのは「特別なパッケージを追加でimportすることなく、その機能を利用することができるようになる」ことを表します。
 
 2016年9月にDaydream Technical PreviewというDaydream向けに特別の対応がなされたUnityが公開され、Unity5.4.2f2-GVR13までバージョンアップされました。その後、2016年12月から始まったUnity 5.6 betaに引き継がれ、先日2016年4月頭、Unity 5.6が正式にリリースされました。
@@ -509,7 +509,7 @@ Daydreamの発表直後に、それまでCardboard SDKという名前だった�
 //footnote[daydream-technical-preview][DAYDREAM TECHNICAL PREVIEW AVAILABLE NOW @<href>{https://blogs.unity3d.com/jp/2016/09/22/daydream-technical-preview-available-now/}]
 //footnote[unity-56-beta][UNITY 5.6 BETA IS NOW AVAILABLE @<href>{https://blogs.unity3d.com/jp/2016/12/13/unity-5-6-beta-is-now-available/}]
 
-それでは、そのCardboard/DaydremにNative対応した現時点最新のUnity 5.6.0f3にて、THETAで撮影したEquirectangular写真を閲覧するシンプルなアプリを作ってみましょう。
+それでは、そのCardboard/DaydreamにNative対応した現時点最新のUnity 5.6.0f3にて、THETAで撮影したEquirectangular写真を閲覧するシンプルなアプリを作ってみましょう。
 UnityとAndroid SDKのセットアップ手順は割愛しますが、Daydream向けのアプリを作るにはtarget API 24（Android 7.0 Nougat）のAndroid SDKコンポーネントが必要なため、ダウンロードしておきます。
 
 UnityのGoogle VR Native対応で含まれる機能と、Google VR SDK for Unityが別パッケージとして提供する機能について、Google VR SDK@<fn>{google-vr-sdk-for-unity}公式サイトにFeaturesとして明確に区別して記載されていますが、Daydream Controllerや、Unityエディタ上で首振りなどのVR操作のエミュレートなど、実質Google VR SDK for Unityパッケージのimportは必須と思われます。
@@ -533,7 +533,7 @@ EquirectangularメディアのUnityでの扱い方については、warapuri氏�
  * Resolution and Presentation中のOrientationをLandscape Leftに変更。
  * Other Settings中のVirtual Reality SupportedのチェックをON、DaydreamまたはCardboardを追加。
  ** DaydreamとCardboardの2つをセットするとDaydreamでクラッシュするようになります。VRモードのenabled切り替えまわりに起因する模様@<fn>{gvr-unity-sdk-issue492}ですが、解決方法はわかりませんでした。
- ** VR Entry Flowという「デバイスをヘッドセットに挿入してください」画面フローとCarboard互換に関する説明ページ@<fn>{google-vr-entry-flow}を見る限り、両対応のアプリは考慮されているようですが…
+ ** VR Entry Flowという「デバイスをヘッドセットに挿入してください」画面フローとCardboard互換に関する説明ページ@<fn>{google-vr-entry-flow}を見る限り、両対応のアプリは考慮されているようですが…
  * Package Nameを"youten.redo.vr.Hello560f3"に変更。
  * Minimum API LevelはCardboard向けにはAndroid 4.4 KitKat (API level 19)あたりを設定、Daydream向けにはAndroid 7.0 Nougat (API level 24)を設定します。
  * 試した機種がARM機のみのため、Device FilterをFAT(ARMv7 + x86)からARMv7に変更。
@@ -564,7 +564,7 @@ Daydreamの素敵なヘッドトラッキングを確認できたところで、
 //image[daydream-gvrdemo-01][GVRDemo Scene][scale=0.75]{
 //}
 
-古いバージョンのGoogle VR SDKにはDaydreamコントローラのデモSceneが独立していたのですが、最新バージョンv1.30ではCardboard時代からおなじみのワープするCubeを探すデモSceneがDaydreamコントローラにも対応しています。
+古いバージョンのGoogle VR SDKではDaydreamコントローラのデモSceneが独立していたのですが、最新バージョンv1.30ではCardboard時代からおなじみのワープするCubeを探すデモSceneがDaydreamコントローラにも対応しています。
 
 //image[daydream-gvrdemo-02][いつものCube探しゲームもDaydreamコントローラで快適に][scale=0.85]{
 //}
