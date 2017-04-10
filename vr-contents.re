@@ -20,7 +20,7 @@
 
  * @<href>{https://github.com/youten/howto-create-vr-contents}
  ** Re:VIEWの素材一式、出力PDF、関連プロジェクトのソースコードを全て含む想定です。
- ** Andorid, Unity等の開発環境の構築手順についても、順次作成の上同リポジトリで公開したいと考えています。
+ ** Android, Unity等の開発環境の構築手順についても、順次作成の上同リポジトリで公開したいと考えています。
 
 本書のうち、私youtenが著作権を有する範囲のライセンスについては、文章はCC-BY 4.0@<fn>{cc-by-4}、ソースコードについてはApache License v2@<fn>{apache-license-v2}を適用します。
 また、表紙他、ImagineVRのIrisモデルをIris ImagineGirlsユーザーライセンス(IGUL)に基づき利用させていただいております。
