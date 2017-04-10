@@ -337,7 +337,7 @@ PlayStation VR@<fn>{playstation-vr}は、SIE社製のVRデバイスです。
 
 これまで上げてきたVRデバイス環境の購入費用について、母艦となるPCやスマートフォンもあわせてまとめると、以下のようになります。
 
- * Cardboard・ハコスコ：Android（5〜10万円）またはiPhone（8〜12万円） + Carboard互換品/ハコスコ（1,000円〜5,000円）
+ * Cardboard・ハコスコ：Android（5〜10万円）またはiPhone（8〜12万円） + Cardboard互換品/ハコスコ（1,000円〜5,000円）
  * Daydream：Android（5〜12万円） + Daydream View（10,000円）
  ** Pixel XLは高級品ですが、他にもDadyream ready機が増えつつあること、Daydrema Viewは$79ですが輸入する必要があります。
  * Gear VR：Galaxy（5万〜10万円） + Gear VR（10,000〜15,000円）
@@ -533,7 +533,7 @@ EquirectangularメディアのUnityでの扱い方については、warapuri氏�
  * Resolution and Presentation中のOrientationをLandscape Leftに変更。
  * Other Settings中のVirtual Reality SupportedのチェックをON、DaydreamまたはCardboardを追加。
  ** DaydreamとCardboardの2つをセットするとDaydreamでクラッシュするようになります。VRモードのenabled切り替えまわりに起因する模様@<fn>{gvr-unity-sdk-issue492}ですが、解決方法はわかりませんでした。
- ** VR Entry Flowという「デバイスをヘッドセットに挿入してください」画面フローとCarboard互換に関する説明ページ@<fn>{google-vr-entry-flow}を見る限り、両対応のアプリは考慮されているようですが…
+ ** VR Entry Flowという「デバイスをヘッドセットに挿入してください」画面フローとCardboard互換に関する説明ページ@<fn>{google-vr-entry-flow}を見る限り、両対応のアプリは考慮されているようですが…
  * Package Nameを"youten.redo.vr.Hello560f3"に変更。
  * Minimum API LevelはCardboard向けにはAndroid 4.4 KitKat (API level 19)あたりを設定、Daydream向けにはAndroid 7.0 Nougat (API level 24)を設定します。
  * 試した機種がARM機のみのため、Device FilterをFAT(ARMv7 + x86)からARMv7に変更。
