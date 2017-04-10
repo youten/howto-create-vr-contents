@@ -339,7 +339,7 @@ PlayStation VR@<fn>{playstation-vr}は、SIE社製のVRデバイスです。
 
  * Cardboard・ハコスコ：Android（5〜10万円）またはiPhone（8〜12万円） + Cardboard互換品/ハコスコ（1,000円〜5,000円）
  * Daydream：Android（5〜12万円） + Daydream View（10,000円）
- ** Pixel XLは高級品ですが、他にもDadyream ready機が増えつつあること、Daydrema Viewは$79ですが輸入する必要があります。
+ ** Pixel XLは高級品ですが、他にもDadyream ready機が増えつつあること、Daydream Viewは$79ですが輸入する必要があります。
  * Gear VR：Galaxy（5万〜10万円） + Gear VR（10,000〜15,000円）
  ** 母艦として国内で型落ちのGalaxyを狙うとコスパフォがよくなります。
  * Oculus Rift：PC（GTX1050Ti, 8万円） + RiftとTouchセット（77,000円）
@@ -509,7 +509,7 @@ Daydreamの発表直後に、それまでCardboard SDKという名前だった�
 //footnote[daydream-technical-preview][DAYDREAM TECHNICAL PREVIEW AVAILABLE NOW @<href>{https://blogs.unity3d.com/jp/2016/09/22/daydream-technical-preview-available-now/}]
 //footnote[unity-56-beta][UNITY 5.6 BETA IS NOW AVAILABLE @<href>{https://blogs.unity3d.com/jp/2016/12/13/unity-5-6-beta-is-now-available/}]
 
-それでは、そのCardboard/DaydremにNative対応した現時点最新のUnity 5.6.0f3にて、THETAで撮影したEquirectangular写真を閲覧するシンプルなアプリを作ってみましょう。
+それでは、そのCardboard/DaydreamにNative対応した現時点最新のUnity 5.6.0f3にて、THETAで撮影したEquirectangular写真を閲覧するシンプルなアプリを作ってみましょう。
 UnityとAndroid SDKのセットアップ手順は割愛しますが、Daydream向けのアプリを作るにはtarget API 24（Android 7.0 Nougat）のAndroid SDKコンポーネントが必要なため、ダウンロードしておきます。
 
 UnityのGoogle VR Native対応で含まれる機能と、Google VR SDK for Unityが別パッケージとして提供する機能について、Google VR SDK@<fn>{google-vr-sdk-for-unity}公式サイトにFeaturesとして明確に区別して記載されていますが、Daydream Controllerや、Unityエディタ上で首振りなどのVR操作のエミュレートなど、実質Google VR SDK for Unityパッケージのimportは必須と思われます。
