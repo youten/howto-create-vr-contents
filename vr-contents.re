@@ -378,7 +378,7 @@ THETA@<fn>{ricoh-theta}はRICOH社のカメラで、コンパクトな棒状の�
 //image[daydream-google-photo][DaydreamでのGoogleフォト画像閲覧][scale=1.00]{
 //}
 
-具体的にどのような表示なるかについて、Googleフォトで旧上岡小学校の写真を共有公開しています@<fn>{google-photo-uwaoka}のでよければそちらを確認願います。
+具体的にどのような表示となるかについて、Googleフォトで旧上岡小学校の写真を共有公開しています@<fn>{google-photo-uwaoka}のでよければそちらを確認願います。
 
 //footnote[google-photo-uwaoka][@<href>{https://goo.gl/photos/yzNVv6GGz7xUMWgn9}]
 
@@ -429,7 +429,7 @@ MMDことMikuMikuDance@<fn>{mikumikudance}は3DCGムービー作成ツールで�
 
 では、MikuMikuDomeMasterでのステレオVR動画の作成方法について、ざっとご紹介します。
 
-MikuMikuDomeMasterのステレオは視差設定にあわせカメラを左右に並べた方式となっているため、正面のみが正しく立体視が可能となります。
+MikuMikuDomeMasterのステレオは視差設定にあわせカメラを左右に並べた方式となっているため、正面のみ正しく立体視が可能となります。
 よって、「適度に離れた正面にモデルをソロで配置し、あまり左右に動かないモーション」を適用し、正面に注視ポイントが集中する動画を作ることがキモとなります。例えば、中央に人が入らない鏡映しデュオモーションなどは残念ながらこの方式のステレオに向いていません。
 
 そこを踏まえた素材を用意した上で、空の新規MMDプロジェクトにモデル・背景・モーションを読み込みます。
@@ -452,7 +452,7 @@ AVIの出力サイズは、以下のように設定してください。いず�
 //image[mmdm-01][DomeMaster.pmxのみMainに残す][scale=0.75]{
 //}
 
-続けて、Equirectangularであれば読み込んだpmxのモデル名「パノラマ」から、DM-PanoモーフをPano側に設定します。Domemasterの際にはDM-PanoモーフをDM側に設定した後、天頂を向いているのを角度にX=90.0を設定することで正面に回すことができます（@<img>{mmdm-02}）。
+続けて、Equirectangularであれば読み込んだpmxのモデル名「パノラマ」から、DM-PanoモーフをPano側に設定します。DomeMasterの際にはDM-PanoモーフをDM側に設定した後、天頂を向いているのを角度にX=90.0を設定することで正面に回すことができます（@<img>{mmdm-02}）。
 
 //image[mmdm-02][DM-Panoモーフをいずれかの端に設定][scale=0.75]{
 //}
@@ -501,7 +501,7 @@ VR空間での移動、ポインタによるオブジェクト選択、触る・
 === Google VR SDKとUnityのVR Native対応について
 
 Daydreamの発表直後に、それまでCardboard SDKという名前だったものはGoogle VR SDKへと名称が変更となりました。
-また、それと同時にUnityがDaydreadm/Cardboard 両VRプラットフォームにNative対応することが発表されました。
+また、それと同時にUnityがDaydream/Cardboard 両VRプラットフォームにNative対応することが発表されました。
 ちなみに、Unityでの「Native対応」というのは「特別なパッケージを追加でimportすることなく、その機能を利用することができるようになる」ことを表します。
 
 2016年9月にDaydream Technical PreviewというDaydream向けに特別の対応がなされたUnityが公開され、Unity5.4.2f2-GVR13までバージョンアップされました。その後、2016年12月から始まったUnity 5.6 betaに引き継がれ、先日2016年4月頭、Unity 5.6が正式にリリースされました。
@@ -564,7 +564,7 @@ Daydreamの素敵なヘッドトラッキングを確認できたところで、
 //image[daydream-gvrdemo-01][GVRDemo Scene][scale=0.75]{
 //}
 
-古いバージョンのGoogle VR SDKにはDaydreamコントローラのデモSceneが独立していたのですが、最新バージョンv1.30ではCardboard時代からおなじみのワープするCubeを探すデモSceneがDaydreamコントローラにも対応しています。
+古いバージョンのGoogle VR SDKではDaydreamコントローラのデモSceneが独立していたのですが、最新バージョンv1.30ではCardboard時代からおなじみのワープするCubeを探すデモSceneがDaydreamコントローラにも対応しています。
 
 //image[daydream-gvrdemo-02][いつものCube探しゲームもDaydreamコントローラで快適に][scale=0.85]{
 //}
