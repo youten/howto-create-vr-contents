@@ -1,14 +1,10 @@
 PREDEF:
-#  - preface.re
 CHAPS:
-  - vr-contents.re
-#  - writing-book.re
-#  - setup.re
-#  - review-introduction.re
-#  - configure.re
-#  - build.re
-#  - workflow.re
-#  - tips.re
+- hajimeni.re
+- y2016-vr.re
+- what-is-vr-contents.re
+- vr-devices.re
+- how-to-create.re
 
 APPENDIX:
 
