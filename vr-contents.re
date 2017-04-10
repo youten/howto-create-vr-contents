@@ -151,7 +151,7 @@ SamsungのGalaxy Gear VR向け動画再生アプリ、Samsung VRのFAQ@<fn>{sams
 
 === Equirectangular（360度全天球）
 
-//image[equirectangular-theta][モノラルEquirecangular画像例][scale=0.65]{
+//image[equirectangular-theta][モノラルEquirectangular画像例][scale=0.65]{
 //}
 
 投影方法としては正距円筒図法とも言われ、球の天頂と底の頂点を表面に沿って縦に割き、ぐいっと長方形になるように伸ばした開いたものです。
